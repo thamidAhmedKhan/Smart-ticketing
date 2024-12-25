@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Ticketing</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="32x32"
+      href="Assets/images/bus-icon.png"
+    />
+
+    <!-- Raleway and Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- daisyUI and tailwindcss -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css styles -->
+    <style>
+      .font_inter {
+        font-family: "Inter", serif;
+      }
+      .font_Raleway {
+        font-family: "Raleway", serif;
+      }
+    </style>
+  </head>
+  <body class="font_inter min-w-[360px] h-[100vh]">
+    <header class="font_Raleway">
+      <!-- section nav -->
+      <sec class="nav">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a class="text-center text-gray-950/70 text-lg font-medium"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a class="text-center text-gray-950/70 text-lg font-medium"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a class="text-center text-gray-950/70 text-lg font-medium"
+                    >Destination</a
+                  >
+                </li>
+                <li>
+                  <a class="text-center text-gray-950/70 text-lg font-medium"
+                    >Search</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-3xl font-extrabold font_Raleway"
+              >P-Ticket</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li>
+                <a class="text-center text-gray-950/70 text-lg font-medium"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a class="text-center text-gray-950/70 text-lg font-medium"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a class="text-center text-gray-950/70 text-lg font-medium"
+                  >Destination</a
+                >
+              </li>
+              <li>
+                <a class="text-center text-gray-950/70 text-lg font-medium"
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end mr-4">
+            <a
+              class="btn px-6 text-lg bg-[#1dd100]/10 rounded-xl border border-[#1dd100]/40 justify-center items-center gap-2 inline-flex"
+            >
+              <span class="text-green-500">Bus</span>
+              <span>
+                <img
+                  src="Assets/images/bus-icon.png"
+                  alt="Bus icon"
+                  class="w-6 h-6"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </sec>
+
+      <!-- section hero -->
+      <div
+        class="relative flex flex-col justify-center items-center mb-20 lg:mb-48"
+      >
+        <!-- main hero -->
+        <sec class="hero px-6">
+          <div
+            class="hero min-h-screen"
+            style="background-image: url('Assets/images/banner.png')"
+          >
+            <div class="hero-overlay bg-opacity-20"></div>
+            <div class="hero-content text-neutral-content text-center">
+              <div
+                class="max-w-xl flex flex-col gap-5 mx-auto justify-center items-center"
+              >
+                <h1 class="text-5xl font-bold">
+                  <span> End-to-End Travel with </span>
+                  <span class="text-green-500"> <br />P Paribahan </span>
+                </h1>
+                <p class="text-base font_inter">
+                  Yes, you can run unit tests and view the results directly
+                  within the app. The integrated testing features allow for a
+                  streamlined .
+                </p>
+                <a href="#ticket_buying">
+                  <button
+                    class="btn font-bold px-6 bg-green-500 border-0"
+                    href=""
+                  >
+                    Buy Tickets
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </sec>
+
+        <!-- sub about hero -->
+        <sec class="about px-6 lg:absolute lg:-bottom-24 max-md:w-full">
+          <div
+            class="rounded-none max-w-[971px] mx-auto px-6 bg-transparent"
+            role="region"
+            aria-label="Statistics Overview"
+          >
+            <div class="flex gap-5 max-md:flex-col max-lg:mt-10">
+              <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+                <div
+                  class="flex grow gap-4 px-6 py-4 w-full bg-white rounded-3xl border-lime-600 border-b-[3px] max-md:px-5 max-md:mt-6"
+                  tabindex="0"
+                >
+                  <img
+                    loading="lazy"
+                    src="Assets/images/people.png"
+                    class="object-contain shrink-0 my-auto w-16 aspect-square"
+                    alt="Users icon representing registered users statistic"
+                  />
+                  <div class="flex justify-center flex-col">
+                    <div
+                      class="self-start text-4xl max-lg:text-2xl font-bold text-center text-gray-950"
+                      aria-label="Over 500 thousand"
+                    >
+                      500K+
+                    </div>
+                    <div
+                      class="mt-2 text-lg max-lg:text-base text-gray-950 text-opacity-60"
+                    >
+                      Registered users
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+                <div
+                  class="flex grow gap-4 px-6 py-4 w-full bg-white rounded-3xl border-lime-600 border-b-[3px] max-md:px-5 max-md:mt-6"
+                  tabindex="0"
+                >
+                  <img
+                    loading="lazy"
+                    src="Assets/images/ticket-cupon.png"
+                    class="object-contain shrink-0 my-auto w-16 aspect-square"
+                    alt="Ticket icon representing tickets sold statistic"
+                  />
+                  <div class="flex flex-col justify-center">
+                    <div
+                      class="self-start text-4xl max-lg:text-2xl font-bold text-gray-950"
+                      aria-label="1.7 lakhs"
+                    >
+                      1.7 lacks
+                    </div>
+                    <div
+                      class="self-start max-lg:text-base mt-2 text-lg text-gray-950 text-opacity-60"
+                    >
+                      Tickets sold
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+                <div
+                  class="flex grow gap-4 px-6 py-4 w-full bg-white rounded-3xl border-lime-600 border-b-[3px] max-md:px-5 max-md:mt-6"
+                  tabindex="0"
+                >
+                  <img
+                    loading="lazy"
+                    src="Assets/images/stoppage.png"
+                    class="object-contain shrink-0 my-auto w-16 aspect-square"
+                    alt="Partners icon representing rental partners statistic"
+                  />
+                  <div class="flex flex-col justify-center">
+                    <div
+                      class="self-start text-4xl max-lg:text-2xl font-bold text-gray-950"
+                      aria-label="Over 80 thousand"
+                    >
+                      80K+
+                    </div>
+                    <div
+                      class="mt-2 text-lg max-lg:text-base text-gray-950 text-opacity-60"
+                    >
+                      Rental partners
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sec>
+      </div>
+    </header>
+
+    <main>
+      <!-- section offers -->
+      <sec class="offers">
+        <div class="section_heading font_Raleway w-full text-center my-11">
+          <h1 class="text-4xl max-lg:text-2xl font-bold">
+            Best offers for you
+          </h1>
+        </div>
+
+        <div
+          class="flex gap-5 justify-center items-center max-md:flex-col max-lg:mt-10"
+        >
+          <div
+            class="flex max-w-[35rem] lg:w-5/12 bg-[#FFBF0F] rounded-3xl max-lg:px-5"
+          >
+            <div class="flex flex-1 justify-center items-center">
+              <div class="flex flex-col gap-1">
+                <h1 class="text-4xl max-lg:text-2xl font-bold">15% OFF</h1>
+                <p class="font-bold">on your next purchase</p>
+                <p class="opacity-65">use by January 2024</p>
+              </div>
+            </div>
+
+            <div>
+              <img
+                src="Assets/images/cupon-devider.png"
+                alt="border"
+                class="h-40"
+              />
+            </div>
+
+            <div class="w-4/12 flex justify-center items-center p-2">
+              <div class="flex flex-col gap-1">
+                <h1 class="text-3xl max-lg:text-2xl font-bold font_Raleway">
+                  NEW15
+                </h1>
+                <p class="opacity-65">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex max-w-[35rem] lg:w-5/12 bg-[#F78C9C] rounded-3xl max-lg:px-5"
+          >
+            <div class="flex flex-1 justify-center items-center">
+              <div class="flex flex-col gap-1">
+                <h1 class="text-4xl max-lg:text-2xl font-bold">20% OFF</h1>
+                <p class="font-bold">on your next purchase</p>
+                <p class="opacity-65">use by January 2024</p>
+              </div>
+            </div>
+
+            <div>
+              <img
+                src="Assets/images/cupon-devider.png"
+                alt="border"
+                class="h-40"
+              />
+            </div>
+
+            <div class="w-4/12 flex justify-center items-center p-2">
+              <div class="flex flex-col gap-1">
+                <h1 class="text-3xl max-lg:text-2xl font-bold font_Raleway">
+                  Couple 20
+                </h1>
+                <p class="opacity-65">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="font_Raleway flex justify-center items-center w-full text-center my-11"
+        >
+          <button
+            class="btn px-6 text-lg bg-white border-2 border-[#1dd100]/40 justify-center items-center gap-2 inline-flex text-green-500"
+          >
+            See All Offers
+          </button>
+        </div>
+      </sec>
+      <!-- section ticket buying -->
+      <sec class="ticket_buying" id="ticket_buying">
+        <div
+          class="bg-[#F7F8F8] w-full rounded-3xl border-lime-600 border-t-[3px] max-md:px-5 max-md:mt-6 max-sm:px-0"
+        >
+          <div class="p-6 max-sm:p-2">
+            <div
+              class="section_heading flex justify-center items-center flex-col gap-4 w-full text-center my-11"
+            >
+              <h1 class="text-4xl font_Raleway max-lg:text-2xl font-bold">
+                P.H Paribahan
+              </h1>
+
+              <p
+                class="max-w-[736px] text-center text-gray-950/60 text-lg font-normal font_inter leading-[30px]"
+              >
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined
+                .
+              </p>
+            </div>
+
+            <!-- ticket details -->
+            <div
+              class="ticket_details flex max-sm:flex-col justify-center items-stretch bg-white h-full w-full rounded-2xl"
+            >
+              <div class="main_ticket_details flex flex-col gap-5 flex-1 p-6">
+                <div
+                  class="ticket_details_heading flex justify-between items-center gap-4 w-full"
+                >
+                  <div class="tdh_left flex gap-2">
+                    <div
+                      class="aspect-square flex justify-center items-center w-16"
+                    >
+                      <img
+                        src="Assets/images/bus-logo.png"
+                        loading="lazy"
+                        class="object-contain shrink-0 w-full"
+                        alt="bus logo"
+                      />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <h1 class="text-2xl font-bold">Greenline Paribahan</h1>
+
+                      <p class="text-gray-950/60">
+                        Coach-009-WEB ! AC_Business
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tdh_right flex justify-center items-center gap-2">
+                    <div
+                      class="px-6 py-3 max-md:px-3 text-lg bg-[#1dd100]/10 rounded-lg border border-[#1dd100]/40 justify-center items-center gap-2 inline-flex"
+                    >
+                      <span>
+                        <img
+                          src="Assets/images/seat-green.png"
+                          alt="Bus icon"
+                          class="w-6 h-6"
+                        />
+                      </span>
+                      <span class="text-green-500 max-sm:text-center"
+                        >40 Seats left</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ticket_description bg-[#F7F8F8] rounded-xl p-4">
+                  <div
+                    class="flex justify-between w-full text-lg font-semibold font_Raleway items-center leading-[60px]"
+                  >
+                    <p class="text-gray-950/60">Route</p>
+                    <p class="text-gray-950">Dhaka - Sylhet</p>
+                  </div>
+
+                  <div
+                    class="border border-gray-950/20 border-b border-dashed w-full h-0"
+                  ></div>
+
+                  <div
+                    class="flex justify-between w-full text-lg font-semibold font_Raleway items-center leading-[60px]"
+                  >
+                    <p class="text-gray-950/60">Departure Time</p>
+                    <p class="text-gray-950">9:00 PM</p>
+                  </div>
+
+                  <div
+                    class="border border-gray-950/20 border-b border-spacing-2 border-dashed w-full h-0"
+                  ></div>
+
+                  <div
+                    class="other_details flex justify-center items-center gap-4 w-full px-4 pt-4 max-md:px-2 max-md:pt-2"
+                  >
+                    <div
+                      class="od_box text-gray-950/80 text-base font-medium font-['Inter'] bg-gray-950/5 rounded-xl px-6 py-3 max-md:px-3 max-md:py-1.5"
+                    >
+                      Boarding Point - Laxmipur
+                    </div>
+
+                    <div
+                      class="od_box text-gray-950/80 text-base font-medium font-['Inter'] bg-gray-950/5 rounded-xl px-6 py-3 max-md:px-3 max-md:py-1.5"
+                    >
+                      Dropping Point - Bogura
+                    </div>
+
+                    <div
+                      class="od_box text-gray-950/80 text-base font-medium font-['Inter'] bg-gray-950/5 rounded-xl px-6 py-3 max-md:px-3 max-md:py-1.5"
+                    >
+                      Est. Time - 11 Hour
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="ticket_devider w-16 h-auto flex flex-col justify-between items-center max-sm:hidden"
+              >
+                <div
+                  class="aspect-square w-16 max-md:w-10 rounded-b-full bg-[#F7F8F8]"
+                ></div>
+
+                <div
+                  class="border-[#1dd100] flex-1 border-l-2 w-0 border-dashed"
+                ></div>
+
+                <div
+                  class="aspect-square w-16 max-md:w-10 rounded-t-full bg-[#F7F8F8]"
+                ></div>
+              </div>
+
+              <div
+                class="flex justify-center items-center w-3/12 max-sm:w-full max-md:pr-4 max-md:text-center"
+              >
+                <div class="flex flex-col justify-center items-center gap-2">
+                  <div><img src="Assets/images/fare.png" alt="" /></div>
+
+                  <div class="flex flex-col gap-1 justify-center items-center">
+                    <h1
+                      class="text-gray-950 text-[32px] font-bold font-['Raleway'] leading-10"
+                    >
+                      550 Taka
+                    </h1>
+                    <p
+                      class="text-gray-950/60 text-2xl font-semibold font-['Raleway'] leading-10"
+                    >
+                      Per Seat
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- shop section -->
+            <div
+              class="shop_section bg-white rounded-3xl p-6 mt-8 max-md:p-3 flex justify-around items-stretch gap-4 max-lg:flex-col max-lg:justify-center max-lg:gap-20"
+            >
+              <div class="w-[calc(66.666%-2px)] max-lg:w-full">
+                <div>
+                  <div
+                    class="text-start text-gray-950 text-2xl font-semibold font-['Raleway'] py-4"
+                  >
+                    Select Your Seat
+                  </div>
+
+                  <div
+                    class="border border-gray-950/20 border-b border-spacing-2 border-dashed w-full h-0"
+                  ></div>
+
+                  <div class="flex justify-between items-center gap-4 py-2">
+                    <div class="flex justify-center items-center gap-2">
+                      <div
+                        class="flex justify-center items-center aspect-square w-4"
+                      >
+                        <img
+                          src="Assets/images/seat-gray.png"
+                          alt="Gray seat"
+                          class="w-full"
+                        />
+                      </div>
+
+                      <div
+                        class="text-gray-950/50 text-lg font-medium font-['Inter']"
+                      >
+                        Available
+                      </div>
+                    </div>
+
+                    <div class="flex justify-center items-center gap-2">
+                      <div
+                        class="flex justify-center items-center aspect-square w-4"
+                      >
+                        <img
+                          src="Assets/images/seat-green-filled.png"
+                          alt="green seat"
+                          class="w-full"
+                        />
+                      </div>
+
+                      <div
+                        class="text-[#1dd100] text-lg font-medium font-['Inter']"
+                      >
+                        Selected
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="border border-gray-950/20 border-b border-spacing-2 border-dashed w-full h-0"
+                  ></div>
+
+                  <div class="pt-4 flex justify-end items-center">
+                    <div
+                      class="px-10 py-4 bg-gray-950/10 rounded-xl flex justify-center items-center"
+                    >
+                      <img src="Assets/images/wheel.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- seats -->
+                <div
+                  class="flex justify-between items-center gap-14 mt-6 max-sm:flex-col"
+                >
+                  <div>
+                    <div
+                      class="grid grid-cols-[35px_1fr_1fr] gap-5 text-lg font-medium max-w-[px]"
+                      role="group"
+                      aria-label="Seat Selection Grid"
+                    >
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        A
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat A1"
+                      >
+                        A1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat A2"
+                      >
+                        A2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        B
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat B1"
+                      >
+                        B1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat B2"
+                      >
+                        B2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        C
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat C1"
+                      >
+                        C1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat C2"
+                      >
+                        C2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        D
+                      </p>
+                      <button
+                        class="px-11 py-4 text-white bg-lime-600 hover:bg-lime-700 rounded-xl border border-lime-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500"
+                        aria-label="Selected Seat D1"
+                        aria-pressed="true"
+                      >
+                        D1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat D2"
+                      >
+                        D2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        E
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat E1"
+                      >
+                        E1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat E2"
+                      >
+                        E2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        F
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat F1"
+                      >
+                        F1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat F2"
+                      >
+                        F2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        G
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat G1"
+                      >
+                        G1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat G2"
+                      >
+                        G2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        H
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat H1"
+                      >
+                        H1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat H2"
+                      >
+                        H2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        I
+                      </p>
+                      <button
+                        class="px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat I1"
+                      >
+                        I1
+                      </button>
+                      <button
+                        class="px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat I2"
+                      >
+                        I2
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        J
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat J1"
+                      >
+                        J1
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat J2"
+                      >
+                        J2
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div
+                      class="grid grid-cols-[35px_1fr_1fr] gap-5 text-lg font-medium max-w-[px]"
+                      role="group"
+                      aria-label="Seat Selection Grid"
+                    >
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        A
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat A3"
+                      >
+                        A3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat A4"
+                      >
+                        A4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        B
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat B3"
+                      >
+                        B3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat B4"
+                      >
+                        B4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        C
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat C3"
+                      >
+                        C3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat C4"
+                      >
+                        C4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        D
+                      </p>
+                      <button
+                        class="px-11 py-4 text-white bg-lime-600 hover:bg-lime-700 rounded-xl border border-lime-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500"
+                        aria-label="Selected Seat D3"
+                        aria-pressed="true"
+                      >
+                        D3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat D4"
+                      >
+                        D4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        E
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat E3"
+                      >
+                        E3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat E4"
+                      >
+                        E4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        F
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat F3"
+                      >
+                        F3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat F4"
+                      >
+                        F4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        G
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat G3"
+                      >
+                        G3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat G4"
+                      >
+                        G4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        H
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat H3"
+                      >
+                        H3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat H4"
+                      >
+                        H4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        I
+                      </p>
+                      <button
+                        class="px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat I3"
+                      >
+                        I3
+                      </button>
+                      <button
+                        class="px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat I4"
+                      >
+                        I4
+                      </button>
+
+                      <p
+                        class="text-gray-950/50 text-lg font-medium font-['Inter'] px-2 py-4"
+                      >
+                        J
+                      </p>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat J3"
+                      >
+                        J3
+                      </button>
+                      <button
+                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        aria-label="Seat J4"
+                      >
+                        J4
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="border border-gray-950/20 border-l border-spacing-2 border-dashed w-0 h-auto max-lg:border-l-0 max-lg:border-t max-lg:h-0 max-lg:w-full"
+              ></div>
+
+              <div class="w-6/12 max-lg:w-full">
+                <div>
+                  <div
+                    class="text-start text-gray-950 text-2xl font-semibold font-['Raleway'] py-4"
+                  >
+                    Select Your Seat
+                  </div>
+
+                  <div
+                    class="border border-gray-950/20 border-b border-spacing-2 border-dashed w-full h-0"
+                  ></div>
+                </div>
+
+                <div class="mt-4">
+                  <form class="mx-auto w-full" aria-labelledby="booking-title">
+                    <h1 id="booking-title" class="sr-only">Booking Form</h1>
+
+                    <section
+                      class="bg-[#F7F8F8] p-6 rounded-xl"
+                      aria-labelledby="price-details"
+                    >
+                      <h2 id="price-details" class="sr-only">Price Details</h2>
+                      <div
+                        class="grid grid-cols-3 text-base justify-between items-stretch font-medium text-gray-950"
+                      >
+                        <div class="text-start">Seat</div>
+                        <div class="text-center">Class</div>
+                        <div class="text-end">Price</div>
+                      </div>
+
+                      <hr class="my-4 border-dashed border-gray-950/20" />
+
+                      <div class="grid grid-cols-3 text-base text-gray-950/60">
+                        <div class="space-y-4 text-start">
+                          <div>C2</div>
+                          <div>C2</div>
+                        </div>
+                        <div class="space-y-4 text-center">
+                          <div>Economy</div>
+                          <div>Economy</div>
+                        </div>
+                        <div class="space-y-4 text-end">
+                          <div>550</div>
+                          <div>550</div>
+                        </div>
+                      </div>
+
+                      <hr class="my-4 border-solid border-gray-950/20" />
+
+                      <div
+                        class="flex justify-between text-base font-medium text-gray-950"
+                      >
+                        <div>Total Price</div>
+                        <div>BDT <span> 1100</span></div>
+                      </div>
+
+                      <div
+                        class="flex justify-between bg-white rounded-xl mt-4 p-2"
+                      >
+                        <label
+                          for="coupon"
+                          class="text-sm text-gray-950/40 my-auto pl-4"
+                        >
+                          Have a coupon?
+                        </label>
+                        <input
+                          type="text"
+                          id="coupon"
+                          class="sr-only"
+                          aria-label="Enter coupon code"
+                        />
+                        <button
+                          type="button"
+                          class="bg-lime-600 text-white font-semibold px-5 py-3 rounded-lg"
+                        >
+                          Apply
+                        </button>
+                      </div>
+
+                      <div
+                        class="flex justify-between mt-6 text-base font-medium text-gray-950"
+                      >
+                        <div>Grand Total</div>
+                        <div>BDT 1100</div>
+                      </div>
+                    </section>
+
+                    <div class="space-y-6 mt-6">
+                      <div>
+                        <label
+                          for="name"
+                          class="text-base font-semibold text-gray-950 block"
+                        >
+                          Passenger Name<span aria-label="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          required
+                          class="w-full mt-4 px-6 py-6 rounded-xl border border-gray-950/10 text-gray-950"
+                          placeholder="Enter your name"
+                        />
+                      </div>
+
+                      <div>
+                        <label
+                          for="phone"
+                          class="text-base font-semibold text-gray-950 block"
+                        >
+                          Phone Number<span aria-label="required">*</span>
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          required
+                          class="w-full mt-4 px-6 py-6 rounded-xl border border-gray-950/10 text-gray-950"
+                          placeholder="Enter your phone number"
+                        />
+                      </div>
+
+                      <div>
+                        <label
+                          for="email"
+                          class="text-base font-semibold text-gray-950 block"
+                        >
+                          Email ID
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          class="w-full mt-4 px-6 py-6 rounded-xl border border-gray-950/10 text-gray-950"
+                          placeholder="Enter your email id"
+                        />
+                      </div>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="w-full mt-6 px-8 py-5 bg-lime-600 text-white text-xl font-extrabold rounded-2xl"
+                    >
+                      Next
+                    </button>
+
+                    <nav
+                      class="flex justify-center gap-10 mt-6 text-base text-gray-950/60 max-w-[351px] mx-auto"
+                    >
+                      <a
+                        href="#"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-600"
+                      >
+                        Terms and Conditions
+                      </a>
+                      <a
+                        href="#"
+                        class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-600"
+                      >
+                        Cancellation Policy
+                      </a>
+                    </nav>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <br /><br /><br /><br /><br /><br />
+          </div>
+        </div>
+      </sec>
+    </main>
+
+    <footer class="bg-[#030712] p-20 max-md:p-10 max-sm:p-5">
+
+      <div class="flex flex-col" role="contentinfo" aria-label="Footer">
+        <div
+          class="flex flex-wrap gap-5 justify-between w-full max-md:max-w-full"
+        >
+          <div class="flex flex-col">
+            <div
+              class="self-start text-4xl font-extrabold text-center text-white"
+              role="heading"
+              aria-level="2"
+            >
+              <span class="text-white">P</span>
+              <span aria-hidden="true">-</span>
+              <span class="text-white">T</span>
+              icket
+            </div>
+            <div class="mt-4 text-lg leading-8 text-white text-opacity-80">
+              P-Ticket is a digital platform to make your daily commuting
+              better.
+            </div>
+          </div>
+          <div
+            class="flex flex-col self-start text-xl font-semibold text-center text-white"
+          >
+            <div class="self-start ml-3.5 max-md:ml-2.5">Download our app</div>
+            <img
+              loading="lazy"
+              src="Assets/images/googlePlayDownloed.png"
+              class="object-contain mt-5 aspect-[3.38] w-[189px]"
+              alt="Download P-Ticket mobile app"
+            />
+          </div>
+        </div>
+        <div
+          class="mt-12 w-full border-2 border-dashed border-white border-opacity-30 min-h-[2px] max-md:mt-10 max-md:max-w-full"
+          role="separator"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="flex flex-wrap gap-5 justify-between mt-8 w-full text-base max-md:max-w-full"
+        >
+          <div class="text-white text-opacity-70">
+            @all rights reserved, P-Ticket services limited.2024
+          </div>
+          <nav
+            class="flex gap-8 font-medium text-white"
+            aria-label="Footer navigation"
+          >
+            <a
+              href="#terms"
+              class="grow hover:underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+              >Terms & condition</a
+            >
+            <a
+              href="#refund"
+              class="basis-auto hover:underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+              >Return & refund policy</a
+            >
+            <a
+              href="#privacy"
+              class="basis-auto hover:underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+              >Privacy policy</a
+            >
+          </nav>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>
