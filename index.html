@@ -35,6 +35,11 @@
       .font_Raleway {
         font-family: "Raleway", serif;
       }
+      .seats {
+        pointer-events: auto; /* Ensures clicks are registered */
+        position: relative;
+        z-index: 1;
+      }
     </style>
   </head>
   <body class="font_inter min-w-[360px] h-[100vh]">
@@ -578,13 +583,15 @@
                         A
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_A1 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_A1"
                         aria-label="Seat A1"
                       >
                         A1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_A2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_A2"
                         aria-label="Seat A2"
                       >
                         A2
@@ -596,13 +603,15 @@
                         B
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_B1 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_B1"
                         aria-label="Seat B1"
                       >
                         B1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_B2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_B2"
                         aria-label="Seat B2"
                       >
                         B2
@@ -614,13 +623,15 @@
                         C
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_C1 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_C1"
                         aria-label="Seat C1"
                       >
                         C1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_C2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_C2"
                         aria-label="Seat C2"
                       >
                         C2
@@ -632,14 +643,16 @@
                         D
                       </p>
                       <button
-                        class="px-11 py-4 text-white bg-lime-600 hover:bg-lime-700 rounded-xl border border-lime-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500"
+                        class="seats seat_D1 px-11 py-4 bg-stone-50 hover:bg-stone-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50 border"
+                        id="seat_D1"
                         aria-label="Selected Seat D1"
                         aria-pressed="true"
                       >
                         D1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_D2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_D2"
                         aria-label="Seat D2"
                       >
                         D2
@@ -651,13 +664,15 @@
                         E
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_E1 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_E1"
                         aria-label="Seat E1"
                       >
                         E1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_E2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_E2"
                         aria-label="Seat E2"
                       >
                         E2
@@ -669,13 +684,15 @@
                         F
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_F1 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_F1"
                         aria-label="Seat F1"
                       >
                         F1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_F2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_F2"
                         aria-label="Seat F2"
                       >
                         F2
@@ -687,13 +704,15 @@
                         G
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_G1 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_G1"
                         aria-label="Seat G1"
                       >
                         G1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_G2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_G2"
                         aria-label="Seat G2"
                       >
                         G2
@@ -705,13 +724,15 @@
                         H
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_H1 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_H1"
                         aria-label="Seat H1"
                       >
                         H1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_H2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_H2"
                         aria-label="Seat H2"
                       >
                         H2
@@ -723,13 +744,15 @@
                         I
                       </p>
                       <button
-                        class="px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_I1 px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_I1"
                         aria-label="Seat I1"
                       >
                         I1
                       </button>
                       <button
-                        class="px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_I2 px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_I2"
                         aria-label="Seat I2"
                       >
                         I2
@@ -741,13 +764,15 @@
                         J
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_J1 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_J1"
                         aria-label="Seat J1"
                       >
                         J1
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_J2 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_J2"
                         aria-label="Seat J2"
                       >
                         J2
@@ -767,13 +792,15 @@
                         A
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_A3 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_A3"
                         aria-label="Seat A3"
                       >
                         A3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_A4 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_A4"
                         aria-label="Seat A4"
                       >
                         A4
@@ -785,13 +812,15 @@
                         B
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_B3 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_B3"
                         aria-label="Seat B3"
                       >
                         B3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_B4 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_B4"
                         aria-label="Seat B4"
                       >
                         B4
@@ -803,13 +832,15 @@
                         C
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_C3 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_C3"
                         aria-label="Seat C3"
                       >
                         C3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_C4 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_C4"
                         aria-label="Seat C4"
                       >
                         C4
@@ -821,14 +852,16 @@
                         D
                       </p>
                       <button
-                        class="px-11 py-4 text-white bg-lime-600 hover:bg-lime-700 rounded-xl border border-lime-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500"
+                        class="seats seat_D3 px-11 py-4 bg-stone-50 hover:bg-stone-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_D3"
                         aria-label="Selected Seat D3"
                         aria-pressed="true"
                       >
                         D3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_D4 px-11 py-4 bg-stone-50 hover:bg-stone-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_D4"
                         aria-label="Seat D4"
                       >
                         D4
@@ -840,13 +873,15 @@
                         E
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_E3 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_E3"
                         aria-label="Seat E3"
                       >
                         E3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_E4 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_E4"
                         aria-label="Seat E4"
                       >
                         E4
@@ -858,13 +893,15 @@
                         F
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_F3 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_F3"
                         aria-label="Seat F3"
                       >
                         F3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_F4 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_F4"
                         aria-label="Seat F4"
                       >
                         F4
@@ -876,13 +913,15 @@
                         G
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_G3 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_G3"
                         aria-label="Seat G3"
                       >
                         G3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_G4 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_G4"
                         aria-label="Seat G4"
                       >
                         G4
@@ -894,13 +933,15 @@
                         H
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_H3 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_H3"
                         aria-label="Seat H3"
                       >
                         H3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_H4 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_H4"
                         aria-label="Seat H4"
                       >
                         H4
@@ -912,13 +953,15 @@
                         I
                       </p>
                       <button
-                        class="px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_I3 px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_I3"
                         aria-label="Seat I3"
                       >
                         I3
                       </button>
                       <button
-                        class="px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_I4 px-12 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_I4"
                         aria-label="Seat I4"
                       >
                         I4
@@ -930,13 +973,15 @@
                         J
                       </p>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_J3 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_J3"
                         aria-label="Seat J3"
                       >
                         J3
                       </button>
                       <button
-                        class="px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        class="seats seat_J4 px-11 py-4 rounded-xl bg-stone-50 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500 text-gray-950/50"
+                        id="seat_J4"
                         aria-label="Seat J4"
                       >
                         J4
@@ -955,7 +1000,7 @@
                   <div
                     class="text-start text-gray-950 text-2xl font-semibold font-['Raleway'] py-4"
                   >
-                    Select Your Seat
+                    Confirm Your Seat
                   </div>
 
                   <div
@@ -983,17 +1028,14 @@
                       <hr class="my-4 border-dashed border-gray-950/20" />
 
                       <div class="grid grid-cols-3 text-base text-gray-950/60">
-                        <div class="space-y-4 text-start">
-                          <div>C2</div>
-                          <div>C2</div>
+                        <div class="space-y-4 text-start" id="seat">
+                          <div>---</div>
                         </div>
-                        <div class="space-y-4 text-center">
-                          <div>Economy</div>
-                          <div>Economy</div>
+                        <div class="space-y-4 text-center" id="seat_type">
+                          <div>---</div>
                         </div>
-                        <div class="space-y-4 text-end">
-                          <div>550</div>
-                          <div>550</div>
+                        <div class="space-y-4 text-end" id="seat_price">
+                          <div>---</div>
                         </div>
                       </div>
 
@@ -1003,27 +1045,29 @@
                         class="flex justify-between text-base font-medium text-gray-950"
                       >
                         <div>Total Price</div>
-                        <div>BDT <span> 1100</span></div>
+                        <div>BDT <span id="total_price"> 000</span></div>
                       </div>
 
                       <div
                         class="flex justify-between bg-white rounded-xl mt-4 p-2"
                       >
-                        <label
+                        <!-- <label
                           for="coupon"
                           class="text-sm text-gray-950/40 my-auto pl-4"
                         >
                           Have a coupon?
-                        </label>
+                        </label> -->
                         <input
                           type="text"
                           id="coupon"
-                          class="sr-only"
+                          class="w-full px-4 py-3 rounded-xl border-none text-gray-950"
                           aria-label="Enter coupon code"
+                          placeholder="Have a coupon?"
                         />
                         <button
                           type="button"
                           class="bg-lime-600 text-white font-semibold px-5 py-3 rounded-lg"
+                          aria-label="Apply coupon"                        
                         >
                           Apply
                         </button>
@@ -1033,7 +1077,7 @@
                         class="flex justify-between mt-6 text-base font-medium text-gray-950"
                       >
                         <div>Grand Total</div>
-                        <div>BDT 1100</div>
+                        <div>BDT <span id="grand_total"> 000</span></div>
                       </div>
                     </section>
 
@@ -1089,6 +1133,7 @@
                     <button
                       type="submit"
                       class="w-full mt-6 px-8 py-5 bg-lime-600 text-white text-xl font-extrabold rounded-2xl"
+                      aria-label="Apply coupon"
                     >
                       Next
                     </button>
@@ -1113,14 +1158,12 @@
                 </div>
               </div>
             </div>
-            <br /><br /><br /><br /><br /><br />
           </div>
         </div>
       </sec>
     </main>
 
     <footer class="bg-[#030712] p-20 max-md:p-10 max-sm:p-5">
-
       <div class="flex flex-col" role="contentinfo" aria-label="Footer">
         <div
           class="flex flex-wrap gap-5 justify-between w-full max-md:max-w-full"
@@ -1186,7 +1229,8 @@
           </nav>
         </div>
       </div>
-
     </footer>
+
+    <script src="Assets/js/custom.js"></script>
   </body>
 </html>

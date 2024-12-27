@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Ticketing</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="32x32"
+      href="Assets/images/bus-icon.png"
+    />
+
+    <!-- Raleway and Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- daisyUI and tailwindcss -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="font_inter min-w-[360px] h-[100vh] flex justify-center items-center font-['Roboto'] bg-[#f7f8f8]"
+  >
+    <div
+      class="flex flex-col justify-center items-center w-4/6 p-10 gap-10 bg-white"
+    >
+      <div
+        class="success self-center flex-col flex justify-center items-center gap-10"
+      >
+        <img
+          src="Assets/images/success.png"
+          alt="Success"
+          class="aspect-square w-24 h-24"
+        />
+        <span
+          class="success uppercase text-[#27AE60] text-center text-xl font-black"
+          >Success</span
+        >
+      </div>
+
+      <div
+        className="text-center flex flex-col justify-center items-center space-x-5"
+      >
+        <p class="text-[#4a494a] text-xl font-medium text-center">
+          Thank you for Booking Our Bus Seats. We are working hard to find the
+          best service and deals for you.
+        </p>
+
+        <p
+          class="text-[#4a494a] text-xl font-light leading-[33.44px] text-center pt-3"
+        >
+          Shortly you will find a confirmation in your email.
+        </p>
+
+        <div class="flex justify-center items-center pt-3">
+          <a href="index.html">
+            <button
+              class="btn px-20 rounded-full bg-[#27ae60] text-white py-2 self-center"
+            >
+              Continue
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
