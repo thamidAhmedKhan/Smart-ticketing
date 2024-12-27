@@ -77,6 +77,8 @@ function applyCoupon() {
     DISCOUNT10: 10,
     SAVE20: 20,
     OFFER15: 15,
+    NEW15: 15,
+    Couple20: 20,
   };
 
   if (validCoupons[couponCode]) {
