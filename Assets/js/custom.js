@@ -24,16 +24,9 @@ function updateSeatDisplay() {
 
   // Apply discounts if more than 4 seats are selected
   if (seatCount > 3 && activeCoupons.length > 0) {
-    console.log("Initial Total Price:", totalPrice);
-    console.log("Active Discounts:", activeCoupons);
-
     activeCoupons.forEach((discount) => {
-      console.log(`Applying ${discount}% discount to ${grandTotal}`);
       grandTotal -= grandTotal * (discount / 100); // Apply discount
-      console.log("Updated Grand Total:", grandTotal);
     });
-
-    console.log("Final Grand Total:", grandTotal);
   }
 
   // Update the DOM with the seat details
@@ -106,7 +99,7 @@ function getSeatsInfo() {
 }
 
 let seatCount = 0;
-let selectedSeats = []; // Track the selected seats 
+let selectedSeats = []; // Track the selected seats
 let appliedCoupons = []; // Track applied coupon codes
 let activeCoupons = []; // Track active discount percentages
 
@@ -159,12 +152,12 @@ applyButton.addEventListener("click", applyCoupon);
 
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault(); // Prevent default form submission
-  
+
   // Capture form data
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
   const email = document.getElementById("email").value;
-  
+
   // Validate required fields
   if (!name || !phone || !email) {
     alert("Name and Phone Number are required!");
